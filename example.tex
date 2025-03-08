@@ -1,0 +1,37 @@
+% \documentclass{report}
+\documentclass{article}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{mathtools}
+\usepackage{blindtext} % Just for layout demo. Remove when real
+
+\usepackage[backend=biber,style=apa]{biblatex}
+\addbibresource{sample.bib}
+
+\author{StudentName StudentNumber}
+\title{The Title of The Paper}
+
+\begin{document}
+
+	\maketitle
+
+	\section{Abstract}
+	This is the Abstract
+
+	\section{Introduction}
+	% The \parencite command is used for parenthetical citations, and
+	% \textcite can be used for narrative citations.
+	Intro here. \parencite{santos_artificial_2023} likes lines like  $f_{w,b}\big(x\big) = wx+b$
+
+	\section{Body}
+
+	\begin{equation}
+		\frac{\partial J(\mathbf{w},b)}{\partial w_j}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)})x_{j}^{(i)}
+	\end{equation}
+
+	\subsection{Dummy text}
+	\blindtext[8]
+
+	% \bibliographystyle{plain}
+	\printbibliography
+
+\end{document}
